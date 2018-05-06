@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+    <RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/header_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentTop="true"
+            android:background="@drawable/tech1200"
+            android:scaleType="centerCrop" />
+
+
+        <TextView
+            android:id="@+id/header_title"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+
+            android:layout_marginTop="@dimen/activity_horizontal_margin_extended_1"
+
+            android:background="@color/colorTransWin"
+            android:padding="@dimen/standard_padding"
+            android:text="WAX"
+            android:textAllCaps="true"
+            android:textColor="@color/colorAccent"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/header_sub_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+
+            android:layout_below="@id/header_title"
+
+            android:background="@color/colorAccentTrans"
+            android:padding="@dimen/standard_padding"
+            android:text="MUSIC | Gear | Clothing"
+            android:textAllCaps="true"
+            android:textColor="@color/colorTransWin"
+            android:textSize="6sp" />
+        <!-- Begin scroll view for detailed business description !-->
+        <ScrollView
+            android:id="@+id/company_info_deep"
+            android:layout_width="match_parent"
+            android:layout_height="125sp"
+            android:layout_below="@id/header_image"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:padding="@dimen/standard_padding">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginBottom="29dp"
+                android:text="@string/company_blurb" />
+
+
+        </ScrollView>
+
+        <!-- Begin layout for business information and icons !-->
+
+        <RelativeLayout
+            android:id="@+id/sub_layout"
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+            android:layout_below="@id/company_info_deep"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:padding="@dimen/standard_padding">
+
+            <ImageView
+
+                android:id="@+id/business_address"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:background="@drawable/ic_business_black_24dp"
+                android:backgroundTint="@color/colorAccent"
+                android:padding="@dimen/standard_padding" />
+
+            <TextView
+                android:id="@+id/textView_business_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_vertical_margin"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+
+                android:layout_toRightOf="@id/business_address"
+                android:autoLink="map"
+           android:padding="4sp"
+                android:text="808 303 St Suite 909 | Portland Oregon 97001"
+                android:textSize="10dp" />
+
+
+            <ImageView
+
+                android:id="@+id/company_phone_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/business_address"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:background="@drawable/ic_phone_black_24dp"
+                android:backgroundTint="@color/colorAccent"
+                android:padding="@dimen/standard_padding" />
+
+            <TextView
+                android:id="@+id/textView_phone_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+
+                android:layout_below="@id/textView_business_address"
+                android:layout_marginLeft="@dimen/activity_vertical_margin"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:layout_toRightOf="@id/company_phone_icon"
+                android:autoLink="phone"
+                android:padding="4sp"
+
+                android:text="(503) 555 - 1212"
+                android:textSize="10dp" />
+
+            <ImageView
+
+                android:id="@+id/company_web_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/company_phone_icon"
+
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:background="@drawable/ic_public_black_24dp"
+                android:backgroundTint="@color/colorAccent" />
+
+
+            <TextView
+                android:id="@+id/textView_web_link"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/company_phone_icon"
+
+                android:layout_marginLeft="@dimen/activity_vertical_margin"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:layout_toRightOf="@id/company_web_icon"
+                android:autoLink="web"
+                android:padding="4sp"
+                android:text="https://www.waxrecords.com"
+                android:textSize="10dp" />
+
+
+            <ImageView
+
+                android:id="@+id/company_email_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/company_web_icon"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:background="@drawable/ic_email_black_24dp"
+                android:backgroundTint="@color/colorAccent" />
+
+
+            <TextView
+                android:id="@+id/textView_email_link"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_below="@id/textView_web_link"
+                android:layout_marginLeft="@dimen/activity_vertical_margin"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:layout_toRightOf="@id/company_email_icon"
+                android:autoLink="email"
+                android:padding="4sp"
+                android:text="info@waxrecords.com"
+                android:textSize="10dp" />
+
+            <ImageView
+
+                android:id="@+id/company_social_icon"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:layout_below="@id/company_email_icon"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:background="@drawable/ic_people_black_24dp"
+                android:backgroundTint="@color/colorAccent" />
+
+
+            <TextView
+                android:id="@+id/textView_social_link"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textView_email_link"
+
+                android:layout_marginLeft="@dimen/activity_vertical_margin"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:layout_toRightOf="@id/company_social_icon"
+                android:autoLink="all"
+                android:padding="4sp"
+                android:text="https://facebook.com/waxrecords"
+                android:textSize="10dp" />
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
